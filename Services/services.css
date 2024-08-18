@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f1f1f1;
+  overflow-x: hidden;
+}
+.services {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.line {
+  margin: 20px;
+}
+.line div:nth-child(1),
+.line div:nth-child(3) {
+  height: 3px;
+  width: 70px;
+  background: red;
+  border-radius: 5px;
+}
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line div:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  background: #f7327a;
+  border-radius: 50%;
+}
+
+#service-banner {
+  width: 100%;
+  height: 50vh;
+  padding: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(services.img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 70px;
+  line-height: 30px;
+}
+.services h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.box-s {
+  height: 200px;
+  color: rgba(0, 0, 0, 0.5);
+  width: 700px;
+  border-radius: 20px;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 10px 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+.box-s:hover {
+  background-color: rgb(229, 162, 74);
+  transition: 0.7s ease;
+  color: black;
+  cursor: pointer;
+}
+.icon {
+  height: 100px;
+  width: 250px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.details {
+  height: 100px;
+}
+.details h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.details p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #service-banner {
+    height: 65vh;
+  }
+  #service-banner p {
+    font-size: 16px;
+  }
+  .services h2 {
+    font-size: 25px;
+  }
+  .box-s {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 250px;
+    height: 400px;
+  }
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* header footer start*/
+.Fashion-header {
+  background-color: rgb(19, 25, 33);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  margin-bottom: 5px;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  font-family: monospace;
+  margin-left: 190px;
+}
+.navbar li a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.navbar li a:hover {
+  color: orange;
+  cursor: pointer;
+}
+.dropdown-menu li a {
+  color: black;
+  font-weight: 500;
+  font-family: monospace;
+}
+.dropdown a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.Fashion-header-left-section {
+  width: 50px;
+}
+.Fashion-header-left-section a {
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+}
+
+@media (max-width: 800px) {
+  .Fashion-header-left-section {
+    width: unset;
+  }
+}
+.Fashion-header-left-section {
+  display: flex;
+}
+
+.header-link {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+.Fashion-logo {
+  width: 100px;
+  margin-top: 5px;
+}
+
+@media (max-width: 575px) {
+  .Fashion-logo {
+    display: none;
+  }
+}
+
+.Fashion-header-middle-section {
+  flex: 1;
+  max-width: 10px;
+  margin-left: 200px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  width: 60;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: rgb(229, 162, 74);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  height: 22px;
+  width: 22px;
+  margin-left: 2px;
+  margin-top: -2px;
+}
+
+.Fashion-header-right-section {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: 180px;
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: 4px;
+  left: 22px;
+  width: 26px;
+  text-align: center;
+}
+
+/* Footer CSS start*/
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(19, 25, 33);
+  color: #ffffff;
+  text-align: center;
+}
+
+.container-f {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 20px; /*30px*/
+}
+#con p {
+  width: 280px;
+  font-size: 20px; /*30px*/
+  line-height: 40px;
+}
+
+#list ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 38px;
+}
+
+#list ul {
+  font-size: 20px;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#icons ul li a {
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+#icons ul {
+  font-size: 25px; /*30px*/
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  height: 300px;
+  width: 400px;
+}
+
+.container h3 {
+  font-size: 25px; /*35px*/
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.bottom-bar {
+  width: 100%;
+  background: #f18930;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottom-bar p {
+  color: #343434;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+@media screen and (max-width: 758px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .Fashion-header {
+    width: auto;
+    height: auto;
+    background-color: rgb(19, 25, 33);
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #navlinks {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  #navlinks.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Fashion-header-left-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Fashion-header-middle-section {
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .Fashion-header-right-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-button {
+    height: 39px;
+  }
+  .container-f {
+    flex-direction: column;
+  }
+}
+
+/* header footer end */

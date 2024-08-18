@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="general.css" />
+    <!-- <link rel="stylesheet" href="checkout/checkout-header.css" /> -->
+    <link rel="stylesheet" href="checkout/checkout.css" />
+    <link rel="stylesheet" href="Home-Header.css" />
+    <!-- CDN links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header start -->
+    <div class="Fashion-header">
+      <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav id="navlinks">
+        <div class="Fashion-header-left-section">
+          <a href="index.html" class="header-link">
+            <img class="Fashion-logo" src="LOGO (4).png" />
+          </a>
+          <a href="index.html">Fashion & Style</a>
+        </div>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Shop Mall
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Home.html"
+                  >Western Fashion Mall</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="Bhutanese.html"
+                  >Bhutanese Fashion Mall</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../Services/service.html">Service</a></li>
+          <li><a href="../contact us/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="Fashion-header-middle-section">
+          <input class="search-bar" type="text" placeholder="Search" />
+
+          <button class="search-button">
+            <img class="search-icon" src="icons/search-icon.png" />
+          </button>
+        </div>
+
+        <div class="Fashion-header-right-section">
+          <a class="orders-link header-link" href="orders.html">
+            <span class="returns-text">Returns</span>
+            <span class="orders-text">& Orders</span>
+          </a>
+
+          <a class="cart-link header-link" href="checkout.html">
+            <img class="cart-icon" src="icons/cart-icon.png" />
+            <div class="cart-quantity js-cart-quantity">0</div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!-- header end -->
+    <div class="main">
+      <div class="page-title">Review your order</div>
+
+      <div class="checkout-grid">
+        <div class="order-summary js-order-summary"></div>
+
+        <div class="payment-summary">
+          <div class="payment-summary-title">Order Summary</div>
+
+          <div class="payment-summary-row">
+            <div>Items (3):</div>
+            <div class="payment-summary-money">$42.75</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Shipping &amp; handling:</div>
+            <div class="payment-summary-money">$4.99</div>
+          </div>
+
+          <div class="payment-summary-row subtotal-row">
+            <div>Total before tax:</div>
+            <div class="payment-summary-money">$47.74</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Estimated tax (10%):</div>
+            <div class="payment-summary-money">$4.77</div>
+          </div>
+
+          <div class="payment-summary-row total-row">
+            <div>Order total:</div>
+            <div class="payment-summary-money">$52.51</div>
+          </div>
+
+          <button
+            id="btn-part"
+            class="place-order-button button-primary js-place-order-button"
+          >
+            Place your order
+          </button>
+
+          <div class="paymentForm hidden" id="paymentForm">
+            <form action="" id="form1" class="form1">
+              <div class="row">
+                <div class="col">
+                  <h3 class="title">Billing address</h3>
+                  <div class="inputBox">
+                    <span>Full name :</span>
+                    <input type="text" placeholder="Enter your name" required />
+                  </div>
+                  <div class="inputBox">
+                    <span>Email :</span>
+                    <input
+                      type="email"
+                      placeholder="Enter your email here"
+                      required
+                    />
+                  </div>
+                  <div class="inputBox">
+                    <span>Address :</span>
+                    <input
+                      type="text"
+                      placeholder="Enter your address"
+                      required
+                    />
+                  </div>
+                  <div class="inputBox">
+                    <span>City :</span>
+                    <input
+                      type="text"
+                      placeholder="Enter your city name"
+                      required
+                    />
+                  </div>
+
+                  <div class="flex">
+                    <div class="inputBox">
+                      <span>State :</span>
+                      <input
+                        type="text"
+                        placeholder="Enter your state"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <h3 class="title">Payment</h3>
+                  <div class="inputBox">
+                    <span>Cards accepted :</span>
+                    <img
+                      src="icons/card.png"
+                      alt="Payment cards"
+                      width="200px"
+                      height="50px"
+                    />
+                  </div>
+                  <div class="inputBox">
+                    <span>Name on card :</span>
+                    <input type="text" placeholder="Enter your name" required />
+                  </div>
+                  <div class="inputBox">
+                    <span>Card number :</span>
+                    <input
+                      type="text"
+                      placeholder="Enter your address"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="paybtn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Pay
+              </button>
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Payment Prompt
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="icons/checkmark.png" alt="" /> Payment
+                      Succesfull!
+                      <br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Buy
+                      with us agian...Thank You!
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-f">
+        <div id="con">
+          <h3>Contact Us</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i>&nbsp Email: fashion@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>&nbsp Phone: +975 77123456</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>&nbsp Address:
+            Yonphula,Trashigang
+          </p>
+        </div>
+        <div id="list">
+          <h3>Quick Link</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../Services/service.html">Service</a></li>
+            <li><a href="../contact us/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div id="icons">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/photo/?fbid=2896948717096363&set=pcb.2896950383762863"
+                ><i
+                  class="fa-brands fa-facebook"
+                  style="
+                    color: blue;
+                    background-color: white;
+                    border-radius: 50%;
+                  "
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=Jh65uUdLCZM"
+                ><i
+                  class="fa-brands fa-youtube"
+                  style="
+                    color: red;
+                    background-color: white;
+                    border-radius: 10px;
+                  "
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://x.com/i/flow/login"
+                ><i class="fa-brands fa-twitter" style="color: skyblue"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram" style="color: deeppink"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28372.372331720995!2d91.4901786725059!3d27.2647476901437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375c0b58198471bf%3A0x476c279e0beaddf6!2z4L2h4L284L2T4LyL4L2V4L204L2C4LyL4L2j4LyL4L2T4L2E4LyL4L2g4L2B4L284L2R4LyL4L2C4L2T4L2Y4LyL4L2C4L6y4L204LyL4L2Q4L2E4LyL4LyNIFlvbnBodWxhIERvbWVzdGljIEFpcnBvcnQ!5e0!3m2!1sen!2sbt!4v1721993417101!5m2!1sen!2sbt"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy;2024 Fashion & Style. All right reserved</p>
+      </div>
+    </footer>
+    <script type="module" src="scripts/checkout.js"></script>
+    <script src="check.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.carouselExampleIndicators {
+  margin-bottom: 30px;
+}
+.carousel-item img {
+  height: 500px;
+  margin-bottom: 10px;
+}
+.heading1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.trendy {
+  width: 100%;
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card-body button {
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: rgb(229, 162, 74);
+  border-style: none;
+  border-radius: 10px;
+}
+.card-body button:hover {
+  background-color: blue;
+  color: white;
+}
+.card {
+  box-shadow: 4px 4px 0px black;
+}
+.card .card-img-top {
+  height: 300px;
+}
+#more {
+  display: none;
+}
+.slide-img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.slide-img:hover {
+  transform: translateZ(20px);
+}
+
+.slider {
+  height: 250px;
+  width: 100px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 5);
+  background-color: aquamarine;
+  animation: scroll 40s linear infinite;
+  animation-iteration-count: infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
+.slides {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  background-color: white;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+  content: " ";
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+#feedbacks {
+  width: 90%;
+  margin: 5% auto;
+  border: 2px solid black;
+  padding: 20px;
+  /* display: flex; */
+}
+#feedbacks .col-8 {
+  width: 800px;
+}
+#feedbacks .col-8 p {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .feedcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
